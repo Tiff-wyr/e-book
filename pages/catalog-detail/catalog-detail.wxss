@@ -1,0 +1,5 @@
+/* pages/catalog-detail/catalog-detail.wxss */
+@import '/towxml/style/main.wxss';
+@import '/towxml/style/theme/light.wxss';
+
+@import '/iconfont/iconfont/iconfont.wxss'

@@ -1,0 +1,13 @@
+<!--pages/catalog/catalog.wxml-->
+
+<view class='container'>
+<image class='loading' src='../loading/loading.svg' wx:if="{{isLoading}}"></image>
+
+<view wx:else>
+  <view  wx:for="{{catalog}}" wx:key="index">
+          <view class='cata' bindtap='jump' data-pp="{{item._id}}">{{item.title}}</view>   
+</view>
+</view>
+
+    
+</view>

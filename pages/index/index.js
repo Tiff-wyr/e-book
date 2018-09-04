@@ -20,7 +20,6 @@ Page({
     },
     getData(){
         fetch.get('/swiper').then(res=>{
-
           this.setData({
             imgUrls:res.data
           })
@@ -29,11 +28,18 @@ Page({
 
     getCon(){
     fetch.get('/category/books').then(res => {
-      console.log(res)
+      console.log(res.data)
       this.setData({
         mainCon: res.data
       })
     })
+  },
+
+  jump(event){
+    console.log(event)
+      wx.navigateTo({
+        url: `/pages/detail/detail?id=${event.currentTarget.dataset.id}&type=${event.currentTarget.dataset.type}`,
+      })
   }
     
  

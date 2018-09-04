@@ -1,0 +1,22 @@
+<!--pages/catalog-detail/catalog-detail.wxml-->
+
+<import src="/towxml/entry.wxml" />
+
+
+<view class='container'>
+            <image class='loading' src='../loading/loading.svg' wx:if="        {{isLoading}}"></image>
+
+            <view wx:else>
+                  <template is="entry" data="{{...article}}" />
+            </view>
+
+              <view class='menu'>
+                    <view class=".iconfont .icon-shangyiye"></view>
+                    <view class=".iconfont .icon-mulu"></view>
+                    <view class=".iconfont  .icon-yueduye_zitizengda"></view>
+                    <view class=".iconfont  .icon-yueduye_zitijianxiao"></view>
+                    <view class=".iconfont  .icon-xiayiye"></view>
+
+              </view>
+ 
+</view>

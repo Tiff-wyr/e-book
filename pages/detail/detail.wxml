@@ -1,2 +1,40 @@
-<!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view class='container' >
+      <view class='top'>
+
+              <view>
+                  <image src='{{detailUrl.img}}'></image>
+              </view>
+              <view class='right'>
+                      <text class='title'>{{detailUrl.book.title}}</text>
+                      <text class='author'>{{detailUrl.book.author}}</text>
+                      <text class='look'>{{detailUrl.book.looknums}}人在看</text>
+                      <text class='like'>{{detailUrl.book.startsnums}}人喜欢</text>
+              </view>
+
+        </view>
+
+        <view class='butt'>
+            <button class='but1'>已收藏</button>
+            <button class='but2'>分享好友</button>
+        </view>
+
+        <view class='main'>
+            <view class='line1'></view>
+            <view class='dec'>简介</view>
+            <view class='dec-con'>{{detailUrl.book.desc}}</view>
+
+           <view class='catelog'>
+                <view style='display:flex'>
+                        <view class='look' bindtap='jump' data-qq='{{detailUrl.book._id}}'>查看目录</view>
+                        <view class='zhang'>共{{detailUrl.sort}}章</view>
+                </view>
+                
+                  <view class='time'>2018-7-25</view>
+           </view> 
+
+           <view class='line2'></view>
+        </view>
+
+        <button class='read' >阅读该书籍</button>
+
+</view>

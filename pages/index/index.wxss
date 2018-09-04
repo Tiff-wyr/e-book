@@ -3,25 +3,65 @@
 width: 710rpx;
 height: 150px;
 }
+.main{
+  margin-top: 15px;
+}
 .top{
   display: flex;
   justify-content: space-between;
+  
 }
 .top .top-l{
-  font-size: 
+  font-size: 20px;
+  padding-left: 10px;
+  border-left: 2px solid black;
+  
+
+}
+.top .top-r{
+  font-size: 12px;
+  color: #555
+}
+.pp{
+  display: flex;
+  margin: 20rpx 0;
+}
+.pp .left image{
+  width: 250rpx;
+  height: 300rpx;
 }
 .right{
+  margin-left: 10rpx;
+}
+
+.pp .right{
    display: flex;
    flex-direction: column;
+   justify-content: space-between
+}
+.pp .right .title{
+  font-size: 15px;
+  color: #000
 }
 .right .dec{
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp:3;
   overflow: hidden;
+  color: #333;
+  font-size: 13px;
+  margin-top: 8px;
 
 }
 .bott{
   display: flex;
   justify-content: space-between;
+}
+.bott .author{
+  font-size: 15px;
+  color:#222;
+}
+.bott .looknums{
+    font-size: 15px;
+  color:#222;
 }

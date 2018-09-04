@@ -4,23 +4,28 @@
   <swiper indicator-dots="{{indicatorDots}}"
     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{imgUrls}}">
-      <swiper-item class="swiper">
-        <image src="{{item.img}}" class="slide-image" width="355" height="150"/>
+      <swiper-item class="swiper" id='nbjhbhjkj'  data-type="swiper" data-id="{{item._id}}" bindtap='jump'>
+        <image src="{{item.img}}" class="slide-image" width="355" height="150" />
       </swiper-item>
     </block>
   </swiper>
 
-    <view wx:for="{{mainCon}}" wx:key="index">
+    <view wx:for="{{mainCon}}" wx:key="index" class='main'>
 
           <view class='top'>
                   <view class='top-l'>{{item.title}}</view>
                   <view  class='top-r'>更多..</view>
           </view>
 
-          <view wx:for="{{item.books}}" wx:key="index">
-                <view class='left'>
+          <view wx:for="{{item.books}}" wx:key="index" >
+
+
+
+<view class='pp' data-id='{{item._id}}' data-type='con' bindtap='jump'>
+            <view class='left'>
                   <image src='{{item.img}}'></image>
                 </view>
+
                 <view class='right'>
 
                     <view>
@@ -30,10 +35,20 @@
                     
                     <view class='bott'>
                           <view class='author'>{{item.author}}</view>
-                          <view>{{item.looknums}}人在看</view>
+                          <view class='looknums'>{{item.looknums}}人在</view>
                     </view>
+
               </view>
+</view>
+              
+
+
+
+
           </view>
+
+
+
 
     </view>
 </view>

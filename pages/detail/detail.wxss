@@ -1,1 +1,91 @@
 /* pages/detail/detail.wxss */
+.top{
+  display: flex;
+}
+.top image{
+  width: 250rpx;
+  height: 300rpx;
+}
+.top .right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.butt{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25rpx;
+}
+.butt .but1{
+  width: 100px;
+  height: 40px;
+  font-size: 30rpx;
+  color: #000;
+  line-height: 40px;
+}
+.butt .but2{
+  width: 100px;
+  height: 40px;
+  font-size: 30rpx;
+  color: #000;
+  line-height: 40px;
+}
+.main{
+  margin-top: 25rpx;
+}
+.main  .line1{
+  width: 710rpx;
+  height: 15rpx;
+  background: #e9e9e9;
+}
+
+.main .dec{
+  margin: 25rpx 0;
+    font-size: 40rpx;
+    color: #000;
+
+}
+.main .dec-con{
+margin: 25rpx 0;
+font-size: 25rpx;
+text-indent: 20px;
+}
+
+.catelog{
+  display: flex;
+  justify-content: space-between;
+}
+.catelog .look{
+  font-size: 40rpx;
+  color: #000;
+}
+.catelog .zhang{
+   color: #444;
+   font-size: 20rpx;
+   margin-left: 5px;
+   line-height: 40rpx;
+}
+.catelog .time{
+    font-size: 25rpx;
+  color: #000;
+     line-height: 40rpx;
+}
+.zhang,.time{
+  position: relative;
+  top:3px
+}
+.main  .line2{
+  width: 710rpx;
+  height: 15rpx;
+  background: #e9e9e9;
+  margin: 20rpx 0;
+}
+.read{
+background: rgb(106, 154, 226);
+color: #fff;
+line-height: 60rpx;
+border-radius: 10rpx;
+position: fixed;
+bottom: 80rpx;
+width: 710rpx;
+}

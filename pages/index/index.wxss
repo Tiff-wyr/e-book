@@ -1,0 +1,27 @@
+/**index.wxss**/
+.slide-image{
+width: 710rpx;
+height: 150px;
+}
+.top{
+  display: flex;
+  justify-content: space-between;
+}
+.top .top-l{
+  font-size: 
+}
+.right{
+   display: flex;
+   flex-direction: column;
+}
+.right .dec{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+  overflow: hidden;
+
+}
+.bott{
+  display: flex;
+  justify-content: space-between;
+}

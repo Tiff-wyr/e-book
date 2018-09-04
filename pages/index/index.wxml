@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view class='container'>
+
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item class="swiper">
+        <image src="{{item.img}}" class="slide-image" width="355" height="150"/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+    <view wx:for="{{mainCon}}" wx:key="index">
+
+          <view class='top'>
+                  <view class='top-l'>{{item.title}}</view>
+                  <view  class='top-r'>更多..</view>
+          </view>
+
+          <view wx:for="{{item.books}}" wx:key="index">
+                <view class='left'>
+                  <image src='{{item.img}}'></image>
+                </view>
+                <view class='right'>
+
+                    <view>
+                            <view class='title'>{{item.title}}</view>
+                            <view class='dec'>{{item.desc}}</view>
+                    </view>
+                    
+                    <view class='bott'>
+                          <view class='author'>{{item.author}}</view>
+                          <view>{{item.looknums}}人在看</view>
+                    </view>
+              </view>
+          </view>
+
+    </view>
+</view>
+
+
+

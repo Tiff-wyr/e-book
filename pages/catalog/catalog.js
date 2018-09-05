@@ -34,8 +34,8 @@ Page({
 
   
   jump(event){
-   console.log("www")
-    console.log(event)
+  //  console.log("www")
+  //   console.log(event)
     wx.navigateTo({
       url: `/pages/catalog-detail/catalog-detail?id=${event.currentTarget.dataset.pp}`,
     })

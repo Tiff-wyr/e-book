@@ -1,7 +1,7 @@
 <!--pages/catalog/catalog.wxml-->
 
 <view class='container'>
-<image class='loading' src='../loading/loading.svg' wx:if="{{isLoading}}"></image>
+<image class='loading' src='/loading/loading.svg' wx:if="{{isLoading}}"></image>
 
 <view wx:else>
   <view  wx:for="{{catalog}}" wx:key="index">

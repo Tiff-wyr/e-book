@@ -9,9 +9,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-
-    article:{},
-    isLoading:false
+    isLoading:false,
+    md:"",
+    font:40
   },
 
 
@@ -20,22 +20,42 @@ Page({
       isLoading: true
     })
     this.getCataDetail(options.id)
-    console.log(options.id)
-
-
-    
+    console.log(options.id)  
   },
 
 getCataDetail(id){
       fetch.get(`/article/${id}`).then(res=>{
-        console.log(res)
-        let data = app.towxml.toJson(res.data.article.content, 'markdown');
-
-       
-        this.setData({    
-          article: data,
-          isLoading: false
+        this.setData({
+          isLoading: false,
+          md: res.data.article.content
         })
+
       })
+},
+add(){
+
+  if(this.data.font>60){
+  wx.showToast({
+    title: '字体太大',
+    duration:1000
+  })
+  }else{
+    this.setData({
+      font: this.data.font + 2
+    })
+  }
+},
+sub(){
+          if(this.data.font<24){
+            wx.showToast({
+              title: '字体太小',
+              duration: 1000
+            })
+          }else{
+            this.setData({
+              font: this.data.font - 2
+            })
+          }
+
 }
 })

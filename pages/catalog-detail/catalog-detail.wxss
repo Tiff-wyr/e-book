@@ -1,5 +1,22 @@
 /* pages/catalog-detail/catalog-detail.wxss */
-@import '/towxml/style/main.wxss';
-@import '/towxml/style/theme/light.wxss';
 
-@import '/iconfont/iconfont/iconfont.wxss'
+
+@import '/iconfont/iconfont/iconfont.wxss';
+@import '/wemark/wemark.wxss';
+
+.container .menu{
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 20px;
+  border-top: 1px solid #444 0.8;
+  padding: 5px 3px;
+  background: #fff;
+}
+.md{
+  padding-bottom: 20px;
+}

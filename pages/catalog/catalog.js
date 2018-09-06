@@ -10,14 +10,19 @@ Page({
 
   data: {
       catalog:[],
-      isLoading:false
+      isLoading:false,
+      bookId : ''
   },
 
 
   onLoad: function (options) {
-    console.log(options.id)
+    var catalogId=options.id
+
+    console.log(catalogId)
+
       this.setData({
-        isLoading:true
+        isLoading:true,
+        bookId: catalogId
       })
         this.getCatalog(options.id)
   },
@@ -37,7 +42,7 @@ Page({
   //  console.log("www")
   //   console.log(event)
     wx.navigateTo({
-      url: `/pages/catalog-detail/catalog-detail?id=${event.currentTarget.dataset.pp}`,
+      url: `/pages/catalog-detail/catalog-detail?id=${event.currentTarget.dataset.pp}&bookId=${this.data.bookId}`,
     })
   }
 })

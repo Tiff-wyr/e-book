@@ -1,27 +1,29 @@
 <!--pages/catalog-detail/catalog-detail.wxml-->
-
-
 <view class='container'>
-  <image class='loading' src='/loading/loading.svg' wx:if="{{isLoading}}"></image>
+   <image class='loading' src='/loading/loading.svg' wx:if="{{isLoading}}"></image>
+  <view wx:else class='md' >
+    <view class='wemark_wrapper' style="{{'font-size:'+font+'rpx'}}">
+      <wemark md="{{md}}" highlight type="rich-text"></wemark>
+    </view>
+    <view class='menu'>
+        <view class=".iconfont .icon-shangyiye"></view>
+        <view class=".iconfont .icon-mulu"></view>
+        <view class=".iconfont  .icon-yueduye_zitizengda " bindtap='add'></view>
+        <view class=".iconfont  .icon-yueduye_zitijianxiao" bindtap='sub'></view>
+        <view class=".iconfont  .icon-xiayiye"></view>
+      </view>
+      <view class='mask' >
+         <view  wx:for="{{catalog}}" wx:key="index">
+         <view class='catalog'>
+                        <view class='cata' bindtap='jump' data-pp="{{item._id}}">{{item.title}}</view> 
 
-            <view wx:else class='md' >
-            <view class='wemark_wrapper' style="{{'font-size:'+font+'rpx'}}">
-             <wemark md="{{md}}" highlight type="rich-text"></wemark>
-            </view>
+         </view>
+         
+        </view>
+      </view>
+  </view>
+ </view>
 
-
-                     <view class='menu'>
-                    <view class=".iconfont .icon-shangyiye"></view>
-                    <view class=".iconfont .icon-mulu"></view>
-                    <view class=".iconfont  .icon-yueduye_zitizengda " bindtap='add'></view>
-                    <view class=".iconfont  .icon-yueduye_zitijianxiao" bindtap='sub'></view>
-                    <view class=".iconfont  .icon-xiayiye"></view>
-
-              </view>
-
-
-            </view>
 
            
  
-</view>

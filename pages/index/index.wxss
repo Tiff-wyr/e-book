@@ -1,4 +1,7 @@
 /**index.wxss**/
+.padd-bottom{
+  padding-bottom: 10px;
+}
 .slide-image{
 width: 710rpx;
 height: 150px;

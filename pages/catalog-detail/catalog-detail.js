@@ -11,16 +11,20 @@ Page({
   data: {
     isLoading:false,
     md:"",
-    font:40
+    font:40,
+    catalog:[]
   },
 
 
   onLoad: function (options) {
+
+
     this.setData({
       isLoading: true
     })
     this.getCataDetail(options.id)
-    console.log(options.id)  
+    this.getCatalog(options.bookId)
+  
   },
 
 getCataDetail(id){
@@ -31,6 +35,16 @@ getCataDetail(id){
         })
 
       })
+},
+
+getCatalog(id){
+  fetch.get(`/titles/${id}`).then(res => {
+    console.log(res)
+    this.setData({
+      catalog: res.data,
+    
+    })
+  })
 },
 add(){
 
@@ -57,5 +71,6 @@ sub(){
             })
           }
 
-}
+},
+
 })

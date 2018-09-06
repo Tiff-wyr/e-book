@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class='container'>
+<view class='container padd-bottom'>
 
   <swiper indicator-dots="{{indicatorDots}}"
     autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
@@ -17,25 +17,25 @@
                   <view  class='top-r'>更多..</view>
           </view>
 
-          <view wx:for="{{item.books}}" wx:key="index" >
+          <view wx:for="{{item.books}}" wx:key="index"  wx:for-item="itemName">
 
 
 
-<view class='pp' data-id='{{item._id}}' data-type='con' bindtap='jump'>
+<view class='pp' data-id='{{itemName._id}}' data-type='con' bindtap='jump'>
             <view class='left'>
-                  <image src='{{item.img}}'></image>
+                  <image src='{{itemName.img}}'></image>
                 </view>
 
                 <view class='right'>
 
                     <view>
-                            <view class='title'>{{item.title}}</view>
-                            <view class='dec'>{{item.desc}}</view>
+                            <view class='title'>{{itemName.title}}</view>
+                            <view class='dec'>{{itemName.desc}}</view>
                     </view>
                     
                     <view class='bott'>
-                          <view class='author'>{{item.author}}</view>
-                          <view class='looknums'>{{item.looknums}}人在</view>
+                          <view class='author'>{{itemName.author}}</view>
+                          <view class='looknums'>{{itemName.looknums}}人</view>
                     </view>
 
               </view>

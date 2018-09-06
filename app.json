@@ -3,12 +3,36 @@
     "pages/index/index",
     "pages/detail/detail",
     "pages/catalog/catalog",
-    "pages/catalog-detail/catalog-detail"
+    "pages/catalog-detail/catalog-detail",
+    "pages/study/study",
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "云舒",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"img/home.png",
+        "selectedIconPath":"img/home-select.png"
+      },
+      {
+        "pagePath": "pages/study/study",
+        "text": "我的学习",
+                "iconPath": "img/book.png",
+                "selectedIconPath": "img/book-selector.png"
+      },
+      {
+        "pagePath": "pages/login/login",
+        "text": "个人中心",
+                "iconPath": "img/user.png",
+                "selectedIconPath": "img/user-selector.png"
+      }
+    ]
   }
 }

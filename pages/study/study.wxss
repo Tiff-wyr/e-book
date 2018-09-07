@@ -1,1 +1,39 @@
-/* pages/study/study.wxss */
+
+.study{
+  display: flex;
+}
+
+.study .study-img{
+    width: 250rpx;
+  height: 300rpx;
+}
+.study .study-contain{
+  display: flex;
+  flex-direction: column;
+  margin-left: 3px;
+}
+.study .study-contain .study-title{
+  font-size: 25rpx;
+}
+
+.qq,.line{
+      display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+.study .study-contain .study-section,.study-percent-text,.look,.time{
+   font-size: 20rpx;
+}
+
+.pp{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px
+}
+.read,.look-document{
+    width: 60px;
+  height: 30px;
+  font-size: 30rpx;
+  color: #000;
+  line-height: 30px;
+}

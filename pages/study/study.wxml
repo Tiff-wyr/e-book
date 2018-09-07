@@ -1,2 +1,29 @@
 <!--pages/study/study.wxml-->
-<text>pages/study/study.wxml</text>
+
+<view class='study container'>
+
+       <view class='study-img'></view>
+
+
+       <view class='study-contain'>
+              <view class='study-title'>es6e6es6看云</view>
+              <view class='study-section'>章节</view>
+              <view class='line'>
+                       <view class='study-percent'></view>
+                       <view class='study-percent-text'>已看60%</view>
+              </view>
+              <view class='qq'>
+                       <view class='look'>上次查看：</view>
+                       <view class='time'>11小时前</view>
+              
+              </view>
+
+              <view class='pp'>
+                   <button class='read'>继续阅读</button>
+                   <button class='look-document'>查看文档</button>
+              </view>      
+       </view>
+
+
+
+</view>

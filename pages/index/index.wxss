@@ -68,3 +68,35 @@ height: 150px;
     font-size: 15px;
   color:#222;
 }
+
+
+
+.loading-more{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 160rpx;
+}
+
+.loading-more .loading-img{
+  width: 50rpx;
+  height: 50rpx;
+}
+.loading-more text{
+  margin-left: 20rpx
+}
+
+.no-more{
+  text-align: center;
+  height: 160rpx;
+  margin-top: 40rpx;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.no-more-text{
+  color:#888;
+  width: 500rpx;
+}

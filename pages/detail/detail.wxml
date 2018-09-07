@@ -2,31 +2,31 @@
       <view class='top'>
 
               <view>
-                  <image src='{{detailUrl.img}}'></image>
+                  <image src='{{detailUrl.data.img}}'></image>
               </view>
               <view class='right'>
-                      <text class='title'>{{detailUrl.book.title}}</text>
-                      <text class='author'>{{detailUrl.book.author}}</text>
-                      <text class='look'>{{detailUrl.book.looknums}}人在看</text>
-                      <text class='like'>{{detailUrl.book.startsnums}}人喜欢</text>
+                      <text class='title'>{{detailUrl.data.title}}</text>
+                      <text class='author'>{{detailUrl.data.author}}</text>
+                      <text class='look'>{{detailUrl.data.looknums}}人在看</text>
+                      <text class='like'>{{detailUrl.data.startsnums}}人喜欢</text>
               </view>
 
         </view>
 
         <view class='butt'>
-            <button class='but1'>已收藏</button>
-            <button class='but2'>分享好友</button>
+            <button class='but1' disabled='{{detailUrl.isCollect == 0 ? "" : "true" }}'>{{detailUrl.isCollect == 0 ? '收藏' : '已收藏'}}</button>
+            <button class='but2' open-type="share">分享好友</button>
         </view>
 
         <view class='main'>
             <view class='line1'></view>
             <view class='dec'>简介</view>
-            <view class='dec-con'>{{detailUrl.book.desc}}</view>
+            <view class='dec-con'>{{detailUrl.data.desc}}</view>
 
            <view class='catelog'>
                 <view style='display:flex'>
-                        <view class='look' bindtap='jump' data-qq='{{detailUrl.book._id}}'>查看目录</view>
-                        <view class='zhang'>共{{detailUrl.sort}}章</view>
+                        <view class='look' bindtap='jump' data-qq='{{detailUrl.data._id}}'>查看目录</view>
+                        <view class='zhang'>共{{detailUrl.length}}章</view>
                 </view>
                 
                   <view class='time'>2018-7-25</view>

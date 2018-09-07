@@ -1,57 +1,72 @@
 <!--index.wxml-->
 <view class='container padd-bottom'>
 
-  <swiper indicator-dots="{{indicatorDots}}"
-    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}">
-      <swiper-item class="swiper" id='nbjhbhjkj'  data-type="swiper" data-id="{{item._id}}" bindtap='jump'>
-        <image src="{{item.img}}" class="slide-image" width="355" height="150" />
-      </swiper-item>
-    </block>
-  </swiper>
+        <swiper indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+          <block wx:for="{{imgUrls}}" wx:key="index">
+            <swiper-item class="swiper" data-type="swiper" data-id="{{item.book._id}}" bindtap='jump'>
+              <image src="{{item.img}}" class="slide-image" width="355" height="150" />
+            </swiper-item>
+          </block>
+        </swiper>
 
-    <view wx:for="{{mainCon}}" wx:key="index" class='main'>
+          <view wx:for="{{mainCon}}" wx:key="index" class='main'>
 
-          <view class='top'>
-                  <view class='top-l'>{{item.title}}</view>
-                  <view  class='top-r'>更多..</view>
-          </view>
-
-          <view wx:for="{{item.books}}" wx:key="index"  wx:for-item="itemName">
-
-
-
-<view class='pp' data-id='{{itemName._id}}' data-type='con' bindtap='jump'>
-            <view class='left'>
-                  <image src='{{itemName.img}}'></image>
+                <view class='top'>
+                        <view class='top-l'>{{item.title}}</view>
+                        <view  class='top-r'>更多..</view>
                 </view>
 
-                <view class='right'>
+                    <view wx:for="{{item.books}}" wx:key="index"  wx:for-item="itemName">
 
-                    <view>
-                            <view class='title'>{{itemName.title}}</view>
-                            <view class='dec'>{{itemName.desc}}</view>
-                    </view>
-                    
-                    <view class='bott'>
-                          <view class='author'>{{itemName.author}}</view>
-                          <view class='looknums'>{{itemName.looknums}}人</view>
-                    </view>
 
-              </view>
-</view>
+
+                <view class='pp' data-id='{{itemName._id}}' data-type='con' bindtap='jump'>
+                  <view class='left'>
+                        <image src='{{itemName.img}}'></image>
+                      </view>
+
+                      <view class='right'>
+
+                          <view>
+                                  <view class='title'>{{itemName.title}}</view>
+                                  <view class='dec'>{{itemName.desc}}</view>
+                          </view>
+                          
+                          <view class='bott'>
+                                <view class='author'>{{itemName.author}}</view>
+                                <view class='looknums'>{{itemName.looknums}}人</view>
+                          </view>
+
+                    </view>
+      </view>
               
 
 
 
 
           </view>
+          </view>
+          <!-- 上拉加载 -->
+<view hidden='{{show}}'>
+         <view class='loading-more' wx:if="{{loading}}">
+                      <image class='loading-img' src='/loading/loadingMore.svg'                                      ></image> 
+                      <text>拼命加载中</text>
+          </view>
+         
+         <view class='no-more' wx:else>
+                <text class='no-more-text '>我是有底线的</text>         
+         </view>
+</view>     
+
+       
+   
+  </view>
 
 
 
 
-    </view>
-</view>
+
 
 
 

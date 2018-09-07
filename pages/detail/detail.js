@@ -10,21 +10,16 @@ Page({
 
 
   onLoad: function (options) {
-    detailUrl:{}
-    if(options.type=="con"){
-      this.getDe(options.id)
-    }else
-
+    console.log('详情options',options)
     this.getDetail(options.id)
     
   },
 
   getDetail(id){
-   fetch.get(`/swiper/${id}`).then(res=>{
-    console.log("ahhahah") 
-     console.log(res.data)
+    fetch.get(`/book/${id}`).then(res=>{
+     console.log('书籍详情',res)
    this.setData({
-     detailUrl: res.data
+     detailUrl: res
 
 })
    })
@@ -45,6 +40,12 @@ Page({
   wx.navigateTo({
     url: `/pages/catalog/catalog?id=${event.currentTarget.dataset.qq}`,
      
+    })
+  },
+  onShareAppMessage(){
+    
+    wx.showShareMenu({
+      withShareTicket: true
     })
   }
 })

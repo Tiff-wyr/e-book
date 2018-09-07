@@ -1,2 +1,30 @@
 <!--pages/login/login.wxml-->
-<text>pages/login/login.wxml</text>
+
+<view>
+
+    <view class='top'>
+          <image src=''>图片</image>
+          <view>
+              <view>名字</view>
+              <view>这家伙很懒，什么也没留下</view>
+
+              <view>
+                   <view>
+                       <text>2</text>
+                       <text>收藏</text>
+                   </view>
+
+                    <view>
+                       <text>2</text>
+                       <text>关注</text>
+                   </view>
+
+              </view>
+          </view>
+    </view>
+
+  <view class='bottom'>
+       <image src=''>图片</image>
+  </view>
+
+</view>

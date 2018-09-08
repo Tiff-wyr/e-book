@@ -12,26 +12,34 @@ Page({
     isLoading:false,
     md:"",
     font:40,
-    catalog:[]
+    catalog:[],
+    show:false,
+    jumpId:""
   },
 
 
   onLoad: function (options) {
-
-
+  // console.log("阅读书籍",options)
+  console.log("jump",options.jump)
+//bokid 是这本书的id
     this.setData({
-      isLoading: true
+      isLoading: true,
+    
     })
     this.getCataDetail(options.id)
-    this.getCatalog(options.bookId)
+      this.getCatalog(options.bookId)
+    this.readFirst(options.read)
   
   },
 
 getCataDetail(id){
       fetch.get(`/article/${id}`).then(res=>{
+        console.log("阅读书", res)
         this.setData({
           isLoading: false,
-          md: res.data.article.content
+          md: res.data.article.content,
+          show:false
+         
         })
 
       })
@@ -39,7 +47,7 @@ getCataDetail(id){
 
 getCatalog(id){
   fetch.get(`/titles/${id}`).then(res => {
-    console.log(res)
+    console.log("目录",res)
     this.setData({
       catalog: res.data,
     
@@ -73,4 +81,33 @@ sub(){
 
 },
 
+readFirst(id){
+        
+  fetch.get(`/titles/${id}`).then(res => {
+    console.log("目录数组第一个前言",res.data[0])
+    this.getCataDetail(res.data[0]._id)
+  
+
+  })
+
+},
+  before(){
+
+  },
+  after(){
+
+  },
+click(){
+    this.setData({
+      show:!this.data.show
+    })
+},
+  jumping(event){
+    const id = event.currentTarget.dataset.pp
+                this.setData({
+                  jumpId: id          
+                })
+      this.getCataDetail(id)
+      
+  }
 })

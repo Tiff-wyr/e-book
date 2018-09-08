@@ -6,22 +6,29 @@
       <wemark md="{{md}}" highlight type="rich-text"></wemark>
     </view>
     <view class='menu'>
-        <view class=".iconfont .icon-shangyiye"></view>
-        <view class=".iconfont .icon-mulu"></view>
+        <view class=".iconfont .icon-shangyiye" bindtap='before'></view>
+        <view class=".iconfont .icon-mulu" bindtap='click'></view>
         <view class=".iconfont  .icon-yueduye_zitizengda " bindtap='add'></view>
         <view class=".iconfont  .icon-yueduye_zitijianxiao" bindtap='sub'></view>
-        <view class=".iconfont  .icon-xiayiye"></view>
+        <view class=".iconfont  .icon-xiayiye" bindtap='after'></view>
       </view>
-      <view class='mask' >
-         <view  wx:for="{{catalog}}" wx:key="index">
-         <view class='catalog'>
-                        <view class='cata' bindtap='jump' data-pp="{{item._id}}">{{item.title}}</view> 
+         <view  wx:if="{{show}}">
+                    <!-- 蒙版 -->
+                        <view class='mask' >  </view>       
+                         
+                        <!-- 目录 -->
+             <scroll-view scroll-y class='catalog'>
+                  <view  wx:for="{{catalog}}" wx:key="index" >       
+                        <view class='cata' bindtap="jumping" data-pp="{{item._id}}">{{item.title}}</view> 
+                    </view>
 
-         </view>
-         
-        </view>
+              </scroll-view>
+        
+
+
+               </view>
+                     
       </view>
-  </view>
  </view>
 
 

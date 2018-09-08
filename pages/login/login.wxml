@@ -4,19 +4,19 @@
 
     <view class='top'>
           <image src=''>图片</image>
-          <view>
-              <view>名字</view>
-              <view>这家伙很懒，什么也没留下</view>
+          <view class='top-right'>
+              <view class='name'>名字</view>
+              <view class='te'>这家伙很懒，什么也没留下</view>
 
-              <view>
-                   <view>
-                       <text>2</text>
-                       <text>收藏</text>
+              <view class='line'>
+                   <view class='line-left'>
+                       <text class='num'>2</text>
+                       <text class='store'>收藏</text>
                    </view>
 
-                    <view>
-                       <text>2</text>
-                       <text>关注</text>
+                    <view class='line-right'>
+                       <text class='num2'>2</text>
+                       <text class='gz'>关注</text>
                    </view>
 
               </view>
